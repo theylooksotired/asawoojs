@@ -1,0 +1,6 @@
+{
+    "@context" : "http://schema.org",
+    "@type": "Thing",
+    "name": "Heater",
+    "description": "A simple heater"
+}

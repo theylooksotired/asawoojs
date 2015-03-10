@@ -1,0 +1,29 @@
+{
+    "@context" : "http://schema.org",
+    "@type": "Thing",
+    "name": "Window",
+    "description": "A simple window",
+    "object": [
+		{
+			"@context": "http://localhost:3000/contexts",
+			"@type" : "sensor",
+			"name" : "sensor", 
+			"capabilities" : [
+				{
+			      "@id": "http://www.asawoo.com/functionality#openWindow",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    },
+				{
+			      "@id": "http://www.asawoo.com/functionality#closeWindow",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    }
+			]
+		}
+    ]
+}

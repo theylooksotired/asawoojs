@@ -1,0 +1,34 @@
+{
+	"functionalities" : [
+		{
+			"name" : "communicate", 
+			"uri" : "http://localhost:3000/functionalities/communicate",
+			"capabilities" : ["call", "sms"]
+		},
+		{
+			"name" : "applications", 
+			"uri" : "http://localhost:3000/functionalities/applications",
+			"capabilities" : ["download", "startApp", "stopApp"]
+		},
+		{
+			"name" : "camera", 
+			"uri" : "http://localhost:3000/functionalities/camera",
+			"capabilities" : ["photo", "video"]
+		},
+		{
+			"name" : "heatPlace", 
+			"uri" : "http://localhost:3000/functionalities/heatPlace",
+			"capabilities" : ["temperature-increase"]
+		},
+		{
+			"name" : "coolPlace", 
+			"uri" : "http://localhost:3000/functionalities/coolPlace",
+			"capabilities" : ["temperature-decrease"]
+		},
+		{
+			"name" : "getTemperature", 
+			"uri" : "http://localhost:3000/functionalities/getTemperature",
+			"capabilities" : ["temperature-sense"]
+		}
+	]
+}

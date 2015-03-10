@@ -1,0 +1,22 @@
+{
+    "@context" : "http://schema.org",
+    "@type": "Thing",
+    "name": "Cooler",
+    "description": "A simple cooler",
+    "object": [
+		{
+			"@context": "http://localhost:3000/contexts",
+			"@type" : "cooler",
+			"name" : "cooler",
+			"capabilities" : [
+				{
+			      "@id": "http://www.asawoo.com/functionality#temperatureDecrease",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    }
+			]
+		}
+    ]
+}

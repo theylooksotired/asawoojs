@@ -1,0 +1,64 @@
+{
+    "@context" : "http://schema.org",
+    "@type": "Thing",
+    "name": "Phone",
+    "description": "A simple phone",
+    "object": [
+		{
+			"@context": "http://localhost:3000/contexts",
+			"@type" : "phone",
+			"name" : "phone", 
+			"capabilities" : [
+				{
+			      "@id": "http://www.asawoo.com/functionality#call",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    },
+			    {
+			      "@id": "http://www.asawoo.com/functionality#download",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    },
+			    {
+			      "@id": "http://www.asawoo.com/functionality#photo",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    },
+			    {
+			      "@id": "http://www.asawoo.com/functionality#video",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    },
+			    {
+			      "@id": "http://www.asawoo.com/functionality#sms",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    },
+			    {
+			      "@id": "http://www.asawoo.com/functionality#startApp",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    },
+			    {
+			      "@id": "http://www.asawoo.com/functionality#stopApp",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    }
+			]
+		}
+    ]
+}

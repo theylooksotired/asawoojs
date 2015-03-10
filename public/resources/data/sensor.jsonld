@@ -1,0 +1,22 @@
+{
+    "@context" : "http://schema.org",
+    "@type": "Thing",
+    "name": "Temperature Sensor",
+    "description": "A simple temperature sensor",
+    "object": [
+		{
+			"@context": "http://localhost:3000/contexts",
+			"@type" : "sensor",
+			"name" : "sensor", 
+			"capabilities" : [
+				{
+			      "@id": "http://www.asawoo.com/functionality#temperatureSense",
+			      "@type": [
+			        "owl:NamedIndividual",
+			        "http://www.asawoo.com/functionality#Capability"
+			      ]
+			    }
+			]
+		}
+    ]
+}

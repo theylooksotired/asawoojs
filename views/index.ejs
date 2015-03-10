@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="avatar">
+<head>
+	<meta charset="utf-8" />
+	<title>Avatar Architecture Prototype</title>
+
+	<script src="site/javascripts/angular.min.js"></script>
+	<script src="site/javascripts/angular-route.min.js"></script>
+	<script src="site/javascripts/angular-resource.min.js"></script>
+	<script src="site/javascripts/jquery.min.js"></script>
+	<script src="site/javascripts/jsonld.js"></script>
+	<script src="site/javascripts/main.js"></script>
+
+	<!-- Builder -->
+	<script src="builder/builder.ctrl.js"></script>
+	<script src="builder/initialisation.js"></script>
+
+	<!-- Module Capabilities Manager -->
+	<script src="modules/CapabilitiesManager/cm-service.js"></script>
+	<script src="modules/CapabilitiesManager/CapabilitiesManager.js"></script>
+
+
+	<!-- Module Appliance Communication Manager -->
+	<script src="modules/ApplianceCommunicationManager/ac-service.js"></script>
+	<script src="modules/ApplianceCommunicationManager/ApplianceCommunicationManager.js"></script>
+	<script src="modules/ApplianceCommunicationManager/CimaObject.js"></script>
+
+	<!-- Module Local Functionalities Manager -->
+	<script src="modules/LocalFunctionalitiesManager/lf-service.js"></script>
+	<script src="modules/LocalFunctionalitiesManager/LocalFunctionalityManager.js"></script>
+
+	<!-- Module Context Manager -->
+	<script src="modules/ContextManager/cmng-service.js"></script>
+	<script src="modules/ContextManager/ContextManager.js"></script>
+
+	<!-- Module CollaborativeFunctionalitiesManager -->
+	<script src="modules/CollaborativeFunctionalitiesManager/cfm-service.js"></script>
+	<script src="modules/CollaborativeFunctionalitiesManager/CollaborativeFunctionalitiesManager.js"></script>
+
+</head>
+<body ng-controller="mainCtrl">
+	
+	<h1>Avatar Architecture Prototype</h1>
+
+	<section class="content center">
+
+		<h2 id="main-title">Build an avatar</h2>
+		<div ng-controller="builderCtrl">
+			<div class="buildAvatar">
+				<a href="#" id="buildAvatar_cooler" ng-click="createAvatar('cooler')">
+					Build a cooler
+				</a>
+				<div id="avatarInfo_cooler"></div>
+				<div id="avatarFunctionalities_cooler"></div>
+			</div>
+			<div class="buildAvatar">
+				<a href="#" id="buildAvatar_heater" ng-click="createAvatar('heater')">
+					Build a heater
+				</a>
+				<div id="avatarInfo_heater"></div>
+				<div id="avatarFunctionalities_heater"></div>
+			</div>
+			<div class="buildAvatar">
+				<a href="#" id="buildAvatar_sensor" ng-click="createAvatar('sensor')">
+					Build a sensor
+				</a>
+				<div id="avatarInfo_sensor"></div>
+				<div id="avatarFunctionalities_sensor"></div>
+			</div>
+			<div class="buildAvatar">
+				<a href="#" id="buildAvatar_window" ng-click="createAvatar('window')">
+					Build a window
+				</a>
+				<div id="avatarInfo_window"></div>
+				<div id="avatarFunctionalities_window"></div>
+			</div>
+			<div class="buildAvatar">
+				<a href="#" id="buildAvatar_phone" ng-click="createAvatar('phone')">
+					Build a phone
+				</a>
+				<div id="avatarInfo_phone"></div>
+				<div id="avatarFunctionalities_phone"></div>
+			</div>
+		</div>
+		
+		<h2 id="main-title">Extra options</h2>
+		<div class="extraOptions">
+			<div class="extraOption">
+				<a href="#" ng-click="getAllFunctionalities()">
+					Get the functionalities and capabilities in the server
+				</a>
+			</div>
+			<div class="extraOption">
+				<a href="#" ng-click="getInfoFunctionalities('communicate')">
+					Get the information on the 'communicate' functionality
+				</a>
+			</div>
+			<div class="extraOption">
+				<a href="#" ng-click="getInfoFunctionalities('heatPlace')">
+					Get the information on the 'heatPlace' functionality
+				</a>
+			</div>
+		</div>
+
+		<div class="responses">
+			<pre>{{responseHtml}}</pre>
+		</div>
+		<div class="jsonldResponses"></div>
+
+	</section>
+
+</body>
+</html>
